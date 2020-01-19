@@ -1,0 +1,6 @@
+<h1>Student#edit</h1>
+<%= form_for @student, url:{action: "update"}, html: {class: "form"} do  |s| %>
+
+  <%= render :partial => 'form',:locals => {:s => s} %>
+
+<% end %>

@@ -1,0 +1,7 @@
+<h1>Student#new</h1>
+
+<%= form_for @student, url:{action: "create"}, html: {class: "form"} do  |s| %>
+
+  <%= render :partial => 'form',:locals => {:s => s} %>
+
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Student#index</h1>
+
+<table align="center" border="1" cellpadding="0" cellspacing="0" width="50%">
+  <tr>
+    <th>Nama</th>
+    <th>Kelamin</th>
+    <th colspan="2">Aksi</th>
+  </tr>
+  <% @student.each do |s| %>
+  <tr>
+    <td align="center">
+      <%= s.name %>
+    </td>
+    <td align="center">
+      <%= s.gender %>
+    </td>
+    <td>
+      <%=link_to "Edit" , controller: "student", action: "edit",id:s.id %>
+    </td>
+    <td>
+      <%=link_to "Hapus" , controller: "student", action: "delete",id:s.id %>
+    </td>
+  </tr>
+    <% end %>
+</table>
+<br>
+<center>
+<%= link_to "Tambah Mahasiswa", controller: "student", action: "new"%>
+</center>
